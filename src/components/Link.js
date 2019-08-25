@@ -2,9 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Button } from 'react-bootstrap'
 
-const Link = ({ active, children, onClick }) => (
+const Link = ({ active, children, onClick, filter }) => (
     <Button
-      variant="outline-secondary"
+      variant={"outline-secondary " + filter}
        onClick={onClick}
        disabled={active}
        style={{

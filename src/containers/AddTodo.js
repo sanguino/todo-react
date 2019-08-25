@@ -8,7 +8,9 @@ const AddTodo = ({ dispatch }) => {
 
   return (
 
-      <form onSubmit={e => {
+      <form
+        class='create-form'
+        onSubmit={e => {
         e.preventDefault()
         if (!input.value.trim()) {
           return
