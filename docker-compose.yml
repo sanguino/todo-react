@@ -1,0 +1,13 @@
+version: '3.2'
+services:
+  todo-react:
+    build: ./
+  cypress:
+    image: "cypress/included:3.3.0"
+    depends_on:
+      - todo-react
+    environment:
+      - CYPRESS_baseUrl=http://todo-react
+    working_dir: /e2e
+    volumes:
+      - ./:/e2e
