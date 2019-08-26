@@ -2,6 +2,8 @@ version: '3.2'
 services:
   todo-react:
     build: ./
+    environment:
+      - CI=true
   cypress:
     image: "cypress/included:3.3.0"
     depends_on:
